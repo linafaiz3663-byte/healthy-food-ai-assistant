@@ -1,4 +1,3 @@
-
 import streamlit as st
 import time
 from datetime import datetime
@@ -62,14 +61,3 @@ if st.button("Start 20-Second Reminder"):
         time.sleep(20)
     st.success("✅ Time to eat healthy food!")
 
-# ----------------- FIXED TIME REMINDER (SAFE) -----------------
-st.write("### ⏱ Fixed Time Reminder")
-
-fixed_time = st.time_input("Select eating time")
-
-if st.button("Check Fixed Time Reminder"):
-    now = datetime.now().time()
-    if now.hour == fixed_time.hour and now.minute == fixed_time.minute:
-        st.success("🍽 It's time to eat healthy food!")
-    else:
-        st.info("⏳ Not time yet. Refresh page at the selected time.")
