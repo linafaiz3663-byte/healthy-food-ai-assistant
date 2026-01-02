@@ -35,7 +35,7 @@ dinner_foods = [
 ] * 5
 
 # ----------------- TIME BASED SUGGESTION -----------------
- from datetime import datetime, timedelta
+ from datetime import datetime, timedeltacurrent_hour = (datetime.utcnow() + timedelta(hours=5)).hour
 
 if 6 <= current_hour < 12:
     st.subheader("🍳 Breakfast Time")
